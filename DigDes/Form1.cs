@@ -16,5 +16,21 @@ namespace DigDes
         {
             InitializeComponent();
         }
+
+        Bitmap source;
+
+        private void openFileButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog
+            {
+                Filter = "Изображения|*.jpg;*.jpeg;*.bmp;*.png;*gif"
+            };
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                source = new Bitmap(dialog.FileName);
+                sourcePreview.Image = source;
+            }
+        }
     }
 }
