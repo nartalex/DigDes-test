@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DigDes
@@ -23,8 +16,8 @@ namespace DigDes
             text = asciiText;
 
             //Изменение размеров окна соответственно рисунку
-            this.Width = textWidth * 10;
-            this.Height = textHeight * 10;
+            this.Width = textWidth * 9;
+            this.Height = textHeight * 9;
 
             ToolTip tip = new ToolTip();
             tip.SetToolTip(copyButton, "Скопировать в буфер обмена");
