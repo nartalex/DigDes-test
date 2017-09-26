@@ -75,7 +75,7 @@ namespace DigDes
                 }
 
                 //Добавляем перенос строки в конце каждой линии
-                str.Append("<br>");
+                str.Append("\r\n");
             }
 
             ResultForm resultForm = new ResultForm(str.ToString(), resized.Width, resized.Height);

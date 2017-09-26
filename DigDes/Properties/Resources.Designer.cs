@@ -61,11 +61,12 @@ namespace DigDes.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Открыть файл....
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static string openTheFile {
+        internal static System.Drawing.Bitmap Copy_32x {
             get {
-                return ResourceManager.GetString("openTheFile", resourceCulture);
+                object obj = ResourceManager.GetObject("Copy_32x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
