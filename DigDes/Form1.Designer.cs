@@ -38,6 +38,8 @@
             this.verticalSizeRadio = new System.Windows.Forms.RadioButton();
             this.imageVerSizeUpDown = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.interpolationModeDropDown = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.sourcePreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageHorSizeUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageVerSizeUpDown)).BeginInit();
@@ -77,7 +79,7 @@
             // 
             // imageHorSizeUpDown
             // 
-            this.imageHorSizeUpDown.Location = new System.Drawing.Point(156, 115);
+            this.imageHorSizeUpDown.Location = new System.Drawing.Point(171, 100);
             this.imageHorSizeUpDown.Maximum = new decimal(new int[] {
             200,
             0,
@@ -114,7 +116,7 @@
             // 
             this.horizontalSizeRadio.AutoSize = true;
             this.horizontalSizeRadio.Checked = true;
-            this.horizontalSizeRadio.Location = new System.Drawing.Point(27, 115);
+            this.horizontalSizeRadio.Location = new System.Drawing.Point(27, 100);
             this.horizontalSizeRadio.Name = "horizontalSizeRadio";
             this.horizontalSizeRadio.Size = new System.Drawing.Size(114, 19);
             this.horizontalSizeRadio.TabIndex = 5;
@@ -126,7 +128,7 @@
             // verticalSizeRadio
             // 
             this.verticalSizeRadio.AutoSize = true;
-            this.verticalSizeRadio.Location = new System.Drawing.Point(27, 155);
+            this.verticalSizeRadio.Location = new System.Drawing.Point(27, 134);
             this.verticalSizeRadio.Name = "verticalSizeRadio";
             this.verticalSizeRadio.Size = new System.Drawing.Size(101, 19);
             this.verticalSizeRadio.TabIndex = 7;
@@ -137,7 +139,7 @@
             // imageVerSizeUpDown
             // 
             this.imageVerSizeUpDown.Enabled = false;
-            this.imageVerSizeUpDown.Location = new System.Drawing.Point(156, 155);
+            this.imageVerSizeUpDown.Location = new System.Drawing.Point(171, 134);
             this.imageVerSizeUpDown.Maximum = new decimal(new int[] {
             200,
             0,
@@ -169,12 +171,41 @@
             this.label2.Text = "Откройте файл по кнопке слева\r\nПредпросмотр будет тут";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(24, 186);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 15);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Режим интерполяции:";
+            // 
+            // interpolationModeDropDown
+            // 
+            this.interpolationModeDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.interpolationModeDropDown.FormattingEnabled = true;
+            this.interpolationModeDropDown.Items.AddRange(new object[] {
+            "Бикубическая",
+            "Билинейная",
+            "Высококачественная",
+            "Высококачественная бикубическая",
+            "Высококачественная билинейная",
+            "Низкокачественная",
+            "Ближайшего соседа"});
+            this.interpolationModeDropDown.Location = new System.Drawing.Point(27, 204);
+            this.interpolationModeDropDown.Name = "interpolationModeDropDown";
+            this.interpolationModeDropDown.Size = new System.Drawing.Size(248, 23);
+            this.interpolationModeDropDown.TabIndex = 10;
+            this.interpolationModeDropDown.SelectedIndexChanged += new System.EventHandler(this.interpolationModeDropDown_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AcceptButton = this.generateAsciiButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 361);
+            this.Controls.Add(this.interpolationModeDropDown);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.verticalSizeRadio);
             this.Controls.Add(this.imageVerSizeUpDown);
@@ -209,6 +240,8 @@
         private System.Windows.Forms.RadioButton verticalSizeRadio;
         private System.Windows.Forms.NumericUpDown imageVerSizeUpDown;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox interpolationModeDropDown;
     }
 }
 

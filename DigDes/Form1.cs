@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Text;
 using System.Windows.Forms;
 
@@ -10,12 +11,15 @@ namespace DigDes
         public Form1()
         {
             InitializeComponent();
+            interpolationModeDropDown.SelectedIndex = 3;
         }
 
         private Bitmap source;
 
         //Символы, сортированные по степени заполнения: от более темного к пробелу
         private string[] AsciiChars = { "@", "#", "8", "&", "a", "o", "*", ":", "-", ".", " " };
+
+        private InterpolationMode interpolationMode = InterpolationMode.HighQualityBicubic;
 
         private void openFileButton_Click(object sender, EventArgs e)
         {
@@ -53,7 +57,7 @@ namespace DigDes
             Bitmap resized = new Bitmap(width, height);
             using (Graphics g = Graphics.FromImage(resized))
             {
-                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                g.InterpolationMode = interpolationMode;
                 g.Clear(Color.White);                           //нужно для корректной обработки прозрачности
                 g.DrawImage(source, 0, 0, width, height);
                 g.Dispose();
@@ -88,6 +92,34 @@ namespace DigDes
         private void verticalSizeRadio_CheckedChanged(object sender, EventArgs e)
         {
             imageVerSizeUpDown.Enabled = verticalSizeRadio.Checked;
+        }
+
+        private void interpolationModeDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (interpolationModeDropDown.SelectedIndex)
+            {
+                case 0:
+                    interpolationMode = InterpolationMode.Bicubic;
+                    break;
+                case 1:
+                    interpolationMode = InterpolationMode.Bilinear;
+                    break;
+                case 2:
+                    interpolationMode = InterpolationMode.High;
+                    break;
+                case 3:
+                    interpolationMode = InterpolationMode.HighQualityBicubic;
+                    break;
+                case 4:
+                    interpolationMode = InterpolationMode.HighQualityBilinear;
+                    break;
+                case 5:
+                    interpolationMode = InterpolationMode.Low;
+                    break;
+                case 6:
+                    interpolationMode = InterpolationMode.NearestNeighbor;
+                    break;
+            }
         }
     }
 }
