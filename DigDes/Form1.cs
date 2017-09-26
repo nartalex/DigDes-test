@@ -18,7 +18,7 @@ namespace DigDes
         }
 
         private Bitmap source;
-        private string[] AsciiChars = { "@", "#", "8", "&", "a", "o", "*", ":", "-", ".", "&nbsp;" };
+        private string[] AsciiChars = { "@", "#", "8", "&", "a", "o", "*", ":", "-", ".", " " };
 
         private void openFileButton_Click(object sender, EventArgs e)
         {
@@ -50,6 +50,7 @@ namespace DigDes
             using (Graphics g = Graphics.FromImage(resized))
             {
                 g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                g.Clear(Color.White);
                 g.DrawImage(source, 0, 0, width, height);
                 g.Dispose();
             }
