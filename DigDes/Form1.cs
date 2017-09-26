@@ -43,9 +43,15 @@ namespace DigDes
             int height = verticalSizeRadio.Checked
                 ? (int)imageVerSizeUpDown.Value
                 : (int)Math.Round((int)imageHorSizeUpDown.Value / ratio);
-            MessageBox.Show($"Old res: {source.Width} : {source.Height} \r\nNew res: {width} : {height}");
+            //MessageBox.Show($"Old res: {source.Width} : {source.Height} \r\nNew res: {width} : {height}");
 
-
+            Bitmap resized = new Bitmap(width, height);
+            using (Graphics g = Graphics.FromImage(resized))
+            {
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                g.DrawImage(source, 0, 0, width, height);
+                g.Dispose();
+            }
         }
 
         private void horizontalSizeRadio_CheckedChanged(object sender, EventArgs e)
