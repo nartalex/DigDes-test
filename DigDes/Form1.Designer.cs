@@ -83,15 +83,16 @@
             0,
             0});
             this.imageHorSizeUpDown.Minimum = new decimal(new int[] {
-            15,
+            20,
             0,
             0,
             0});
             this.imageHorSizeUpDown.Name = "imageHorSizeUpDown";
-            this.imageHorSizeUpDown.Size = new System.Drawing.Size(140, 23);
+            this.imageHorSizeUpDown.Size = new System.Drawing.Size(52, 23);
             this.imageHorSizeUpDown.TabIndex = 3;
+            this.imageHorSizeUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.imageHorSizeUpDown.Value = new decimal(new int[] {
-            15,
+            60,
             0,
             0,
             0});
@@ -141,15 +142,16 @@
             0,
             0});
             this.imageVerSizeUpDown.Minimum = new decimal(new int[] {
-            15,
+            20,
             0,
             0,
             0});
             this.imageVerSizeUpDown.Name = "imageVerSizeUpDown";
-            this.imageVerSizeUpDown.Size = new System.Drawing.Size(140, 23);
+            this.imageVerSizeUpDown.Size = new System.Drawing.Size(52, 23);
             this.imageVerSizeUpDown.TabIndex = 6;
+            this.imageVerSizeUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.imageVerSizeUpDown.Value = new decimal(new int[] {
-            15,
+            60,
             0,
             0,
             0});

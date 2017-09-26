@@ -33,22 +33,30 @@
             // 
             // webBrowser1
             // 
+            this.webBrowser1.AllowNavigation = false;
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.IsWebBrowserContextMenuEnabled = false;
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(23, 22);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(23, 24);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(331, 281);
+            this.webBrowser1.ScrollBarsEnabled = false;
+            this.webBrowser1.Size = new System.Drawing.Size(331, 301);
             this.webBrowser1.TabIndex = 0;
             // 
             // ResultForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(331, 281);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(331, 301);
             this.Controls.Add(this.webBrowser1);
-            this.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ResultForm";
-            this.Text = "ResultForm";
+            this.ShowIcon = false;
+            this.Text = "ASCII рисунок";
             this.ResumeLayout(false);
 
         }

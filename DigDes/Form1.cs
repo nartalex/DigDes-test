@@ -66,7 +66,7 @@ namespace DigDes
                 }
                 str.Append("<br>");
             }
-            ResultForm resultForm = new ResultForm(str.ToString());
+            ResultForm resultForm = new ResultForm(str.ToString(), resized.Width, resized.Height);
             resultForm.Show();
         }
 
