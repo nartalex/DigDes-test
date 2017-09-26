@@ -15,7 +15,10 @@ namespace DigDes
         public ResultForm(string asciiText, int textWidth, int textHeight)
         {
             InitializeComponent();
+            //Чтобы корректно обработать рисунок, используем браузер и ставим теги PRE
             webBrowser1.DocumentText = "<pre>" + asciiText + "</pre>";
+
+            //Изменение размеров окна соответственно рисунку
             this.Width = textWidth * 9;
             this.Height = textHeight * 9;
         }
