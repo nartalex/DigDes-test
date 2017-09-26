@@ -17,7 +17,8 @@ namespace DigDes
             InitializeComponent();
         }
 
-        Bitmap source;
+        private Bitmap source;
+        private string[] AsciiChars = { "@", "#", "8", "&", "a", "o", "*", ":", "-", ".", "&nbsp;" };
 
         private void openFileButton_Click(object sender, EventArgs e)
         {
@@ -52,6 +53,20 @@ namespace DigDes
                 g.DrawImage(source, 0, 0, width, height);
                 g.Dispose();
             }
+
+            StringBuilder str = new StringBuilder();
+            for (int h = 0; h < resized.Height; h += 2)
+            {
+                for (int w = 0; w < resized.Width; w++)
+                {
+                    Color pixelColor = resized.GetPixel(w, h);
+                    int grayColor = (pixelColor.R + pixelColor.G + pixelColor.B) / 3;
+                    str.Append(AsciiChars[grayColor * 10 / 255]);
+                }
+                str.Append("<br>");
+            }
+            ResultForm resultForm = new ResultForm(str.ToString());
+            resultForm.Show();
         }
 
         private void horizontalSizeRadio_CheckedChanged(object sender, EventArgs e)
