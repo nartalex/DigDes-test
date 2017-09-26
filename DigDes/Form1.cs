@@ -60,7 +60,9 @@ namespace DigDes
             }
 
             StringBuilder str = new StringBuilder();
-            for (int h = 0; h < resized.Height; h += 2)        //обрабатываем только четные строки, иначе изображение будет вытянуто по вертикали 
+            //Делаем рисунок
+            //Обрабатываем только четные строки, иначе изображение будет сильно вытянуто по вертикали 
+            for (int h = 0; h < resized.Height; h += 2)
             {
                 for (int w = 0; w < resized.Width; w++)
                 {

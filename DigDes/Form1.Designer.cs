@@ -101,9 +101,10 @@
             // generateAsciiButton
             // 
             this.generateAsciiButton.Enabled = false;
+            this.generateAsciiButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.generateAsciiButton.Location = new System.Drawing.Point(26, 274);
             this.generateAsciiButton.Name = "generateAsciiButton";
-            this.generateAsciiButton.Size = new System.Drawing.Size(126, 47);
+            this.generateAsciiButton.Size = new System.Drawing.Size(182, 47);
             this.generateAsciiButton.TabIndex = 4;
             this.generateAsciiButton.Text = "Сгенерировать";
             this.generateAsciiButton.UseVisualStyleBackColor = true;
@@ -160,10 +161,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(470, 147);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(467, 146);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(231, 40);
+            this.label2.Size = new System.Drawing.Size(239, 42);
             this.label2.TabIndex = 8;
             this.label2.Text = "Откройте файл по кнопке слева\r\nПредпросмотр будет тут";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
